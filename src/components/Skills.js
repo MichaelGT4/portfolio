@@ -4,6 +4,33 @@ import "react-multi-carousel/lib/styles.css"
 import WD from '../assets/img/development-web.svg'
 
 export function Skills() {
+
+    const array = [
+        {
+            id: 1,
+            imgUrl: WD,
+            description: "Web Development"
+        },
+        {
+            id: 2,
+            imgUrl: WD,
+            description: "Front-Ende Development"
+        
+        },
+        {
+            id: 3,
+            imgUrl: WD,
+            description: "Back-End development"
+        
+        },
+        {
+            id: 4,
+            imgUrl: WD,
+            description: "Back-End development"
+        
+        }
+    ]
+
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -32,18 +59,14 @@ export function Skills() {
                         <h2>Skills</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, magnam minima possimus iste sed voluptas accusamus saepe, distinctio maxime est architecto vel, odit facilis? Asperiores maxime aliquid iure quae dolorem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam laborum perspiciatis nesciunt corrupti, laboriosam quidem aliquid quis maxime reprehenderit ullam mollitia sunt et harum veniam omnis est cumque adipisci deserunt!</p>
                         <Carousel responsive={responsive} infinite={true} className="skill-slider">
-
-
-
-                            {/* Hacer una lista y un mapa!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
-
-
-
-
-                            <div className="item">
-                                <img src={WD} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
+                            {array.map((i) =>{
+                                return(
+                                    <div key={i.id} className="item">
+                                        <img src={i.imgUrl} alt={i.description} />
+                                        <h5>{i.description}</h5>
+                                    </div>
+                                )
+                            })}
                         </Carousel>
                     </div>
                     </Col>

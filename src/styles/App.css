@@ -98,6 +98,11 @@ nav.navbar a.navbar-brand {
     width: 9%;
     color: #fff;
 }
+
+nav.navbar a.navbar-brand img{
+  height: 80px;
+  color: #fff;
+}
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
@@ -128,7 +133,7 @@ span.navbar-text {
     align-items: center;
     justify-content: center;
     line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.301);
 }
 .social-icon a::before {
     content: "";
@@ -144,7 +149,7 @@ span.navbar-text {
     transform: scale(1);
 }
 .social-icon a img {
-	width: 100%;
+	width: 60%;
 	z-index: 1;
 	transition: 0.3s ease-in-out;
 }
@@ -235,7 +240,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-color: #202124;
+  background-image: url('../assets/img/bg.jpeg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -304,6 +309,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
+  background-image: linear-gradient(to right bottom, #020301, #020301, #051311, #06181a, #020301, #020301, #020301, #020301, #040e0c, #051311, #050c07, #020301);
   position: relative;
 }
 .skill-bx {
@@ -345,7 +351,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-image: linear-gradient(to right bottom, #020301, #020301, #040a05, #05100c, #051413, #020301, #020301, #020301, #020301, #020301, #020301, #020301);
 }
 .project h2 {
 	font-size: 45px;

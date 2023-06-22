@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import Gif from '../assets/img/coding-animated-laptop-flow-stream-ja04010rm5o68zfk.gif'
+import Gif from '../assets/img/bannerImg.png'
 import { useEffect, useState } from "react";
 
 export function Banner (){
@@ -18,7 +18,8 @@ export function Banner (){
         },delta)
 
         return () => {clearInterval(ticker)};
-    },[text])
+        // eslint-disable-next-line
+    },[text, delta])
 
     function tick(){
         let i = loopNum % toRotate.length;

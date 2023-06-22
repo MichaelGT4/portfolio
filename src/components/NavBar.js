@@ -7,7 +7,6 @@ import LinkedIn from '../assets/img/linkedin.svg'
 export function NavBar(){
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
-
     useEffect(() => {
         function onScroll() {
             if (window.scrollY > 50){
