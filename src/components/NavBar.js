@@ -27,7 +27,7 @@ export function NavBar(){
         
     }
     return(
-        <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+        <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
             <Container>
                 <Navbar.Brand href="#home">
                     <img src={Logo} alt="Logo" />
@@ -38,16 +38,16 @@ export function NavBar(){
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link href="#home" className={activeLink === "home" ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                        <Nav.Link href="#link" className={activeLink === "skills" ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Habilidades</Nav.Link>
-                        <Nav.Link href="#projects" className={activeLink === "projects" ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Proyectos</Nav.Link>
+                        <Nav.Link href="#skills" className={activeLink === "skills" ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Habilidades</Nav.Link>
+                        <Nav.Link href="#project" className={activeLink === "projects" ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Proyectos</Nav.Link>
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
                             <a href="#"><img src={LinkedIn} alt="" /></a>
                             <a href="#"><img src={GitHub} alt="" /></a>
                         </div>
+                        <button className="vvd" onClick={() => console.log("Connect")}><span>Let's connect</span></button>
                     </span>
-                    <button className="vvd" onClick={() => console.log("Connect")}><span>Let's connect</span></button>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

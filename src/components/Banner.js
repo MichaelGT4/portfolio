@@ -2,24 +2,25 @@ import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import Gif from '../assets/img/bannerImg.png'
 import { useEffect, useState } from "react";
+import TrackVisibility from "react-on-screen";
 
 export function Banner (){
-    const [loopNum, setLoopNum] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-    const [text, setText] = useState('');
-    const [delta, setDelta] = useState(300- Math.random() * 100);
-    const period = 2000;
+    const [loopNum, setLoopNum] = useState(0)
+    const [isDeleting, setIsDeleting] = useState(false)
+    const [text, setText] = useState('')
+    const [index, setIndex] = useState(1)
+    const [delta, setDelta] = useState(300- Math.random() * 100)
+    const period = 2000
 
     const toRotate = ["Web Developer", "Front-End Developer"]
 
     useEffect(() => {
         let ticker = setInterval(() => {
             tick();
-        },delta)
+        }, delta)
 
         return () => {clearInterval(ticker)};
-        // eslint-disable-next-line
-    },[text, delta])
+    },[text])
 
     function tick(){
         let i = loopNum % toRotate.length;
@@ -35,9 +36,12 @@ export function Banner (){
             setIsDeleting(true)
             setDelta(period)
         } else if (isDeleting && updatedText === '') {
-            setIsDeleting(false);
-            setLoopNum(loopNum + 1);
-            setDelta(500);
+            setIsDeleting(false)
+            setLoopNum(loopNum + 1)
+            setIndex(1)
+            setDelta(500)
+        } else {
+            setIndex(prevIndex => prevIndex + 1)
         }
     }
 
@@ -46,17 +50,26 @@ export function Banner (){
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">Bienvenido a mi Portafolio</span>
-                        <h1>{`Hi I'm Michael Gonzalez Tiburcio`} <span className="wrap">{text}</span></h1>
-                        <p>A passionate and enthusiastic frontend developer from Dominican Republic. Adept at contributing to a highly collaborative work environment, finding solutions and determining customer satisfaction.</p>
-                        <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle/></button>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                                <span className="tagline">Bienvenido a mi Portafolio</span>
+                                <h1>{`Hi I'm Michael Gonzalez Tiburcio`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Front-End Developer" ]'></span><span className="wrap">{text}</span></h1>
+                                <p>A passionated and enthusiastic frontend developer from Dominican Republic. Adept at contributing to a highly collaborative work environment, finding solutions and determining customer satisfaction.</p>
+                                <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle/></button>
+                            </div>}
+                        </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={Gif} alt="Header Img" />
+                    <TrackVisibility>
+                            {({ isVisible }) =>
+                            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                                <img src={Gif} alt="Header Img" />
+                            </div>}
+                        </TrackVisibility>
                     </Col>
                 </Row>
             </Container>
-
         </section>
     )
 }
