@@ -5,6 +5,7 @@ COPY . /
 
 RUN npm install serve
 RUN npm install
+RUN npm run build
 
 EXPOSE 3000
 
