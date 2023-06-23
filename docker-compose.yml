@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  portfolio:
+    container_name: Portfolio
+    restart: unless-stopped
+    image: michaelgt4/portfolio:latest
+    build:
+      context: ./
+      target: dev
+    volumes:
+      - .:/src
+    command: npm run serve
+    ports:
+      - "3000:3000"
