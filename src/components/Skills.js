@@ -14,7 +14,7 @@ export function Skills() {
         {
             id: 2,
             imgUrl: WD,
-            description: "Front-Ende Development"
+            description: "Front-End Development"
         
         },
         {
