@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import Gif from '../assets/img/bannerImg.png'
-import { useEffect, useState } from "react";
+import BannerImg from '../assets/img/bannerImg.png'
+import "animate.css"
 import TrackVisibility from "react-on-screen";
 
 export function Banner (){
@@ -64,7 +65,7 @@ export function Banner (){
                     <TrackVisibility>
                             {({ isVisible }) =>
                             <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                                <img src={Gif} alt="Header Img" />
+                                <img src={BannerImg} alt="Header Img" />
                             </div>}
                         </TrackVisibility>
                     </Col>

@@ -34,7 +34,7 @@ export function Projects (){
                                 <h2>Projects</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti et aliquid natus nostrum voluptate dolorem ducimus soluta fugiat incidunt tenetur maxime autem quaerat modi voluptatum numquam, iure provident explicabo laborum.</p>
                                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                                        <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab" defaultActiveKey="first">
+                                        <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                             <Nav.Item>
                                                 <Nav.Link eventKey="first">Tab One</Nav.Link>
                                             </Nav.Item>

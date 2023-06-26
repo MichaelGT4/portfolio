@@ -5,6 +5,8 @@ import { Banner } from './components/Banner'
 import { Skills } from './components/Skills'
 import { Projects } from './components/Projects'
 import { Analytics } from '@vercel/analytics/react'
+import { Contact } from './components/Contact'
+import { Footer } from './components/Footer'
 
 export default function App() {
   return (
@@ -14,6 +16,8 @@ export default function App() {
         <Banner />
         <Skills />
         <Projects />
+        <Contact />
+        <Footer />
 
       </div>
       <Analytics />
