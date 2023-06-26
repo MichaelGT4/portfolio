@@ -24,7 +24,7 @@ export function Contact(){
     async function handleSubmit (e){
         e.preventDefault();
         setButtonText("Sending...")
-        let res = await fetch("http://portfolio-michaelgt4.vercel.app/contact", {
+        let res = await fetch("https://portfolio-michaelgt4.vercel.app/contact", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
