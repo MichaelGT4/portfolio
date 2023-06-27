@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
+import { ArrowRightCircle, PersonDashFill } from "react-bootstrap-icons";
 import BannerImg from '../assets/img/bannerImg.png'
 import "animate.css"
+import pdf from '../assets/docs/Michael-G-Tiburcio.pdf'
 import TrackVisibility from "react-on-screen";
 
 export function Banner (){
@@ -35,6 +36,7 @@ export function Banner (){
         }
         if(!isDeleting && updatedText === fullText){
             setIsDeleting(true)
+            setIndex(prevIndex => prevIndex - 1);
             setDelta(period)
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false)
@@ -57,7 +59,7 @@ export function Banner (){
                                 <span className="tagline">Bienvenido a mi Portafolio</span>
                                 <h1>{`Hi I'm Michael Gonzalez Tiburcio`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Front-End Developer" ]'></span><span className="wrap">{text}</span></h1>
                                 <p>A passionated and enthusiastic frontend developer from Dominican Republic. Adept at contributing to a highly collaborative work environment, finding solutions and determining customer satisfaction.</p>
-                                <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle/></button>
+                                <a href={pdf}>Check my Resume<ArrowRightCircle/></a>
                             </div>}
                         </TrackVisibility>
                     </Col>

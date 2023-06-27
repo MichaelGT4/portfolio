@@ -2,31 +2,42 @@ import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css"
 import WD from '../assets/img/development-web.svg'
+import Reactjs from '../assets/img/reactjs-svgrepo-com.svg'
+import CSS from '../assets/img/css-3-svgrepo-com.svg'
+import GIT from '../assets/img/git-svgrepo-com.svg'
+import HTML from '../assets/img/html-5-svgrepo-com.svg'
+import GitHub from '../assets/img/github-color-svgrepo-com.svg'
 
 export function Skills() {
 
     const array = [
         {
             id: 1,
-            imgUrl: WD,
-            description: "Web Development"
+            imgUrl: Reactjs,
+            description: "React/React Native"
         },
         {
             id: 2,
-            imgUrl: WD,
-            description: "Front-End Development"
+            imgUrl: HTML,
+            description: "HTML"
         
         },
         {
             id: 3,
-            imgUrl: WD,
-            description: "Back-End development"
+            imgUrl: CSS,
+            description: "CSS"
         
         },
         {
             id: 4,
-            imgUrl: WD,
-            description: "Back-End development"
+            imgUrl: GIT,
+            description: "Git"
+        
+        },
+        {
+            id: 4,
+            imgUrl: GitHub,
+            description: "GitHub"
         
         }
     ]
@@ -57,7 +68,7 @@ export function Skills() {
                     <Col>
                     <div className="skill-bx">
                         <h2>Skills</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, magnam minima possimus iste sed voluptas accusamus saepe, distinctio maxime est architecto vel, odit facilis? Asperiores maxime aliquid iure quae dolorem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam laborum perspiciatis nesciunt corrupti, laboriosam quidem aliquid quis maxime reprehenderit ullam mollitia sunt et harum veniam omnis est cumque adipisci deserunt!</p>
+                        <p>I have experience with these technologies</p>
                         <Carousel responsive={responsive} infinite={true} className="skill-slider">
                             {array.map((i) =>{
                                 return(

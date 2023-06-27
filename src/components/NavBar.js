@@ -43,8 +43,8 @@ export function NavBar(){
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="#"><img src={LinkedIn} alt="" /></a>
-                            <a href="#"><img src={GitHub} alt="" /></a>
+                            <a href="https://www.linkedin.com/in/michael-gt04/"><img src={LinkedIn} alt="" /></a>
+                            <a href="https://github.com/MichaelGT4"><img src={GitHub} alt="" /></a>
                         </div>
                         <button className="vvd" onClick={() => console.log("Connect")}><span>Let's connect</span></button>
                     </span>
