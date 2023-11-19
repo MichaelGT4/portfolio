@@ -309,6 +309,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
+@media (max-width: 768px) {
+	main .banner a {
+    justify-content: center;
+	}
+}
+
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
@@ -428,6 +434,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+}
+.proj-imgbx img {
+  height: 295px;
 }
 .proj-imgbx::before {
   content: "";

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { ArrowRightCircle, PersonDashFill } from "react-bootstrap-icons";
+import { ArrowRightCircle } from "react-bootstrap-icons";
 import BannerImg from '../assets/img/bannerImg.png'
 import "animate.css"
 import pdf from '../assets/docs/Michael-G-Tiburcio.pdf'
@@ -10,19 +10,19 @@ export function Banner (){
     const [loopNum, setLoopNum] = useState(0)
     const [isDeleting, setIsDeleting] = useState(false)
     const [text, setText] = useState('')
-    const [index, setIndex] = useState(1)
+    const [, setIndex] = useState(1)
     const [delta, setDelta] = useState(300- Math.random() * 100)
     const period = 2000
 
     const toRotate = ["Web Developer", "Front-End Developer"]
 
     useEffect(() => {
-        let ticker = setInterval(() => {
+        let ticker = setInterval(() => {    
             tick();
         }, delta)
 
         return () => {clearInterval(ticker)};
-    },[text])
+    })
 
     function tick(){
         let i = loopNum % toRotate.length;
@@ -56,10 +56,10 @@ export function Banner (){
                         <TrackVisibility>
                             {({ isVisible }) =>
                             <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                                <span className="tagline">Bienvenido a mi Portafolio</span>
-                                <h1>{`Hi I'm Michael Gonzalez Tiburcio`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Front-End Developer" ]'></span><span className="wrap">{text}</span></h1>
+                                {/* <span className="tagline">Bienvenido a mi Portafolio</span> */}
+                                <h1 className="h-50">{`Hi I'm Michael Gonzalez Tiburcio`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Front-End Developer" ]'></span><span className="wrap">{text}</span></h1>
                                 <p>A passionated and enthusiastic frontend developer from Dominican Republic. Adept at contributing to a highly collaborative work environment, finding solutions and determining customer satisfaction.</p>
-                                <a href={pdf}>Check my Resume<ArrowRightCircle/></a>
+                                <a className="" href={pdf}>Check my Resume<ArrowRightCircle/></a>
                             </div>}
                         </TrackVisibility>
                     </Col>

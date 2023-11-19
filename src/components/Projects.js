@@ -1,9 +1,11 @@
-import {Nav, Col, Container, Row, Tab } from "react-bootstrap";
+import { Col, Container, Row, Tab } from "react-bootstrap";
 import { ProjectCards } from "./ProjectCards";
 import TrackVisibility from "react-on-screen";
 import 'animate.css'
-import VLB from "../assets/img/Books-VirtualLibrary.png"
-import imgUrl from "../assets/img/animated-programmer.gif"
+import VLB from "../assets/img/Books-VirtualLibrary.jpg"
+import TodoApp from "../assets/img/todo-app.jpg"
+import weather from "../assets/img/weather-app.jpg"
+import imgUrl from "../assets/img/PharmacyApp.jpg"
 
 export function Projects (){
 
@@ -19,6 +21,18 @@ export function Projects (){
             description: "VueJS",
             imgUrl: VLB,
             code: "https://github.com/MichaelGT4/BibliotecaVue"
+        },
+        {
+            title: "To Do App",
+            description: "React JS + Flask + MongoDB",
+            imgUrl: TodoApp,
+            code: "https://github.com/MichaelGT4/todo-app"
+        },
+        {
+            title: "Weather App",
+            description: "React JS",
+            imgUrl: weather,
+            code: "https://github.com/MichaelGT4/weather-app"
         },
     ]
 

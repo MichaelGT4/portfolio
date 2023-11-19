@@ -29,6 +29,10 @@ contactEmail.verify((e) =>{
     }
 });
 
+router.get("/", (req, res) => {
+    res.send('Connected to Server');
+});
+
 router.post("/contact", (req, res) => {
     const name = req.body.firstName + req.body.lastName;
     const email = req.body.email;
@@ -36,7 +40,7 @@ router.post("/contact", (req, res) => {
     const phone = req.body.phone;
     const mail = {
         from: name,
-        to: DESTINATION_EMAIL,
+        to: process.env.DESTINATION_EMAIL,
         subject: "Contact Form Submission - Portfolio",
         html: `<p>Name: ${name}</p>
                 <p>Email: ${email}</p>

@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css"
-import WD from '../assets/img/development-web.svg'
+// import WD from '../assets/img/development-web.svg'
 import Reactjs from '../assets/img/reactjs-svgrepo-com.svg'
 import CSS from '../assets/img/css-3-svgrepo-com.svg'
 import GIT from '../assets/img/git-svgrepo-com.svg'
@@ -53,11 +53,11 @@ export function Skills() {
             items: 3
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
+            breakpoint: { max: 1024, min: 768 },
             items: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 768, min: 0 },
             items: 1
         }
     };

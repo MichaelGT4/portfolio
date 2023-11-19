@@ -1,4 +1,4 @@
-import { startTransition, useState } from "react"
+import { useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import contactImg from "../assets/img/contact.svg"
 
@@ -33,6 +33,7 @@ export function Contact(){
         })
         setButtonText("Send")
         let result = res.json()
+        console.log(result)
         setFormDetails(formInitialDetails)
         if(res.status === 200){
             setStatus({success: true, message: "Message sent succesfully"})

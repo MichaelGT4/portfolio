@@ -5,9 +5,10 @@ COPY . /
 
 RUN npm install serve
 RUN npm install
-RUN npm run build
 
 EXPOSE 3000
+
+RUN npm run build
 
 FROM base as production
 ENV NODE_ENV=production
